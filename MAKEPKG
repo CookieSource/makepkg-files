@@ -16,9 +16,9 @@ md5sums=('SKIP')
 
 package() {
 
-  install -d -m 755 "$pkgdir"/etc/skel
+  install -d -m 755 "$pkgdir"/etc
 
-  cd $srcdir/$pkgname/kde-plasma-customization-dark
-  cp -r . "$pkgdir"/etc/skel
+  cd $srcdir/$pkgname/etc/
+  cp -r . "$pkgdir"/etc
 
 }
