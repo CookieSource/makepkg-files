@@ -1,0 +1,24 @@
+# Maintainer: Cookie Alice
+# contact: Cookie Alice
+
+pkgname=kde-plasma-customization-dark
+pkgver=0.1
+pkgrel=0
+pkgdesc="sets Plasma Dark as the default look in plasma"
+arch=('any')
+url="https://github.com/cookiesource/${pkgname}"
+license=('GPL3')
+makedepends=('git')
+provides=(${pkgname})
+conflicts=(${pkgname})
+source=("git+${url}.git")
+md5sums=('SKIP')
+
+package() {
+
+  install -d -m 755 "$pkgdir"/etc/skel
+
+  cd $srcdir/$pkgname/kde-plasma-customization-dark
+  cp -r . "$pkgdir"/etc/skel
+
+}
