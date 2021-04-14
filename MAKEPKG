@@ -15,10 +15,6 @@ source=("git+${url}.git")
 md5sums=('SKIP')
 
 package() {
-
-  install -d -m 755 "$pkgdir"/etc
-
   cd $srcdir/$pkgname/etc/
-  cp -r . "$pkgdir"/etc
-
+  
 }
